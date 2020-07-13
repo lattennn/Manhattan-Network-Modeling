@@ -22,7 +22,7 @@ In order to simulate a network in Omnet we need three kinds of files:
 
 ## Network Description File (.ned)
 
-```c++
+```omnet++
 Package package_name; // you define the name of your package (It's also the name of the omnet++ project)
 
 simple Anode  // command `simple` to definea simple module  -> The first letter should be upper case
@@ -117,7 +117,7 @@ void Anode::handleMessage(cMessage *msg)
 
 + We need to create two hosts -> in design part you just need to drag it and move it into the network box -> then change the name.
   
-```c++ 
+```omnet++ 
 //What the 'design' part did
 
 package hello_world;
