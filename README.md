@@ -25,7 +25,7 @@ In order to simulate a network in Omnet we need three kinds of files:
 ```omnet
 Package package_name; // you define the name of your package (It's also the name of the omnet++ project)
 
-simple Anode  // command `simple` to definea simple module  -> The first letter should be upper case
+simple Anode  // command `simple` to definea simple module  -> The first letter can be lower case
 {
     gates:          // `gates` to specify the ports of the node
         input in;   // variable -> input port named 'in'
@@ -33,7 +33,7 @@ simple Anode  // command `simple` to definea simple module  -> The first letter 
 }
 
 network Anetwork    // `network`define the network named Anetwork -> The first letter should be upper case
-{ 
+{
     submodules:
         host1: Anode;  //Assign a simple module Anode to host1
         host2: Anode;
