@@ -61,11 +61,14 @@ network Anetwork    // `network`define the network named Anetwork -> The first l
 {
     submodules:
         host1: Anode;  //Assign a simple module Anode to host1
-        host2: Anode;
+        host2: Anode;  // So the network is built by two simple modules and 1 compound modules
+        net3: nodes;  // The total compound module is this network
         
     connections:
         host1.out --> host2.in;
-        host2.out --> host1.in;
+        host2.out --> net3.in;
+        net3.in --> host1.in;
+        
 }
 ```
 
