@@ -32,6 +32,31 @@ simple Anode  // command `simple` to definea simple module  -> The first letter 
         output out; // variable -> output port named 'out'
 }
 
+module nodes{
+
+  parameters:
+      @display("i=msic/node_vs,black;p=,,m,5,50,50;bgb=180,145"); //background size 180*145 length*width
+  gates:
+      input ins[];    // a vector of input ports
+      output outs[]; // a vector of output ports //when you add one more, do ++
+  submodules:
+      h1: Anode {
+        @display("p=90,100");
+      }
+      h2: Anode {
+        @display("p=60,60");
+      }
+      h3: Anode {
+        @display("p=30,100"); //display() to show the position in the design part
+      }
+  connections:
+      in++ --> h3.in++ //the first 'in' port of compound module
+      h1.out --> h2.in;
+      h2.out --> out++;
+      h3.out --> h1.in; // so the network is: -->h3-->h1-->h2-->
+    
+}
+
 network Anetwork    // `network`define the network named Anetwork -> The first letter can be lower case
 {
     submodules:
@@ -51,7 +76,7 @@ The network configuration file (also called initialization file) contains the **
 omnetpp.ini:
 ```
 [General]
-network = Anetwork;
+network = Anetwork; #Should be the same name as the one defined in the .ned file
 ```
 
 ## Network Source File (.cc)
