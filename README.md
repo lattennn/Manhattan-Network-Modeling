@@ -179,3 +179,25 @@ network My_hello_world
 + Done
 
 
+
+
+## Some Notes on Omnet++
+
+[Reference](https://groups.google.com/forum/#!topic/omnetpp/hSA2gQKR6NY)
+
+When to use the volatile parameter?
+
+- Non volatile parameters are usually read in the initialize function and then stored in a member variable of the class and the class uses that value throughout the simulation. 
+
+  This means that the actual par("name") function call is done only once. 
+
+  Even if you define the parameter as volatile you would draw only a single value from a distribution at the beginning.
+
+- If you want to use a volatile parameter, you should access the parameter directly each time you want to draw a different value 
+
+  (i.e. you should use par("delay") each time when a new message arrives to the channel.
+
+- get rid of the delay member variable and use par("delay") whenever a message arrives.
+
+
+
