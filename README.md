@@ -32,7 +32,7 @@ simple Anode  // command `simple` to definea simple module  -> The first letter 
         output out; // variable -> output port named 'out'
 }
 
-network Anetwork    // `network`define the network named Anetwork -> The first letter should be upper case
+network Anetwork    // `network`define the network named Anetwork -> The first letter can be lower case
 {
     submodules:
         host1: Anode;  //Assign a simple module Anode to host1
