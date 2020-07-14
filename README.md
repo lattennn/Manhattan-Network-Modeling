@@ -8,7 +8,7 @@ Manhattan Network Modeling built by OMNET++
 
 An Omnet++ model (an network) consists (composed) of modules that communicate with **message passing** *via connection*:
 
-  + simple modules: written in C++, using the simulation class library
+  + simple modules: written in C++, using the simulation class library 使用一些仿真的类的库
   
   + compound modules: Group of simple modules 
   
