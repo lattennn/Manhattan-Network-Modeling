@@ -13,7 +13,7 @@ Manhattan Network Modeling built by OMNET++
 
 ## What Is Our Goal For All Labs
 
-- Under a specific Routing way
+1. Under a specific Routing way
 
     - set arguments for LongChannel delay Parameter *among L={10,30,50,70,90}) 10 simulations for each*
 
@@ -27,7 +27,7 @@ Manhattan Network Modeling built by OMNET++
 
     对于每一个点来说，记录所有到达这个点的信息所经过的路由次数，算平均值 ----> 一个信息到达一个点的路由次数平均值。
 
-- Study the network performance using these three indeces:
+2. Study the network performance using these three indeces (L fixed):
 
     - Pick an appropriate argument for *Tia* such that 95% confidence interval of the estimate of **average Q**, out of 10 runs, loosely falls between 10%-50% of qlimit (Fix L)
 
