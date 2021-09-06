@@ -17,7 +17,7 @@ In order to simulate a network in Omnet we need three kinds of files:
 3. Source file (.cc)
 
 
-## Network Description File (.ned)
+## Network Description File (.ned) ONLY AN EXAMPLE (not this project)
 
 ```omnet
 Package package_name; // you define the name of your package (It's also the name of the omnet++ project)
