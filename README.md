@@ -138,7 +138,7 @@ void Anode::handleMessage(cMessage *msg)
 
     - First method you just click on the simple module icon (in the Types) THEN click inside the canvas -> If we go to 'source' we will see inside the 'network' it automatically added that simple module and it's called unnamed->we can change it from either parts.
     
-    - Second you just go to the cource code write everything you want.    
+    - Second you just go to the source code write everything you want.    
 
 + We need to create two hosts -> in design part you just need to drag it and move it into the network box -> then change the name.
   
